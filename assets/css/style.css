@@ -455,3 +455,100 @@ input:focus, textarea:focus{border-color: rgba(44,242,209,.45);}
   .hero .lead{font-size: .84rem !important;}
   .btn{font-size: .92rem !important;}
 }
+
+
+/* Ultra-compact HERO sizing (v4) - match rest of site */
+@media (max-width: 520px){
+  /* keep overall site sizes; only shrink HERO + hero card */
+  .hero{padding: 56px 0 24px !important;}
+  .hero__left{padding-top: 2px !important;}
+
+  .chip{
+    font-size: .70rem !important;
+    padding: 6px 10px !important;
+    border-radius: 999px !important;
+    max-width: 96% !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .hero h1{
+    font-size: 18px !important;
+    line-height: 1.10 !important;
+    margin: 8px 0 10px !important;
+  }
+  .hero .lead{
+    font-size: .80rem !important;
+    line-height: 1.48 !important;
+    max-width: 38ch !important;
+    margin: 0 auto !important;
+  }
+
+  .hero__cta{
+    margin-top: 10px !important;
+    gap: 10px !important;
+  }
+  .hero__cta .btn{
+    padding: 10px 12px !important;
+    font-size: .90rem !important;
+    border-radius: 16px !important;
+  }
+
+  .hero__trust{
+    margin-top: 10px !important;
+    gap: 8px !important;
+  }
+  .trust__item{
+    padding: 9px 10px !important;
+    min-height: 66px !important;
+    border-radius: 16px !important;
+  }
+  .trust__big{font-size: .96rem !important;}
+  .trust__small{font-size: .80rem !important;}
+
+  /* Hero right card ("O que você recebe") smaller */
+  .hero__right .glass-card{
+    padding: 12px !important;
+    border-radius: 18px !important;
+    max-width: 420px !important;
+  }
+  .hero__right .glass-card h3{
+    font-size: 1.00rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .hero__right .carousel__card{
+    padding: 10px !important;
+    border-radius: 16px !important;
+  }
+  .hero__right .carousel__tag{
+    font-size: .72rem !important;
+    padding: 6px 9px !important;
+    margin-bottom: 7px !important;
+  }
+  .hero__right .checklist li{
+    font-size: .84rem !important;
+    margin: 6px 0 !important;
+  }
+  .hero__right .price-box{
+    padding: 10px !important;
+    border-radius: 14px !important;
+    gap: 8px !important;
+  }
+  .hero__right .price-box__label{font-size: .76rem !important;}
+  .hero__right .price-box__price{font-size: .96rem !important;}
+  .hero__right .price-box__sub{font-size: .76rem !important;}
+  .hero__right .btn--full{
+    padding: 10px 12px !important;
+    font-size: .90rem !important;
+    border-radius: 16px !important;
+  }
+  .hero__right .mini{font-size: .78rem !important;}
+}
+
+/* Super narrow */
+@media (max-width: 390px){
+  .hero h1{font-size: 17px !important;}
+  .hero .lead{font-size: .78rem !important;}
+}
