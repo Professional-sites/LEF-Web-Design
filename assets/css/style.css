@@ -254,27 +254,102 @@ input:focus, textarea:focus{border-color: rgba(44,242,209,.45);}
 .dot.active{background: linear-gradient(90deg, var(--brand1), var(--brand2));}
 
 
-/* Mobile polish fixes */
+
+
+
+/* Mobile perfect sizing */
 @media (max-width: 980px){
-  .container{width: min(var(--max), calc(100% - 28px));}
-  .hero__content{align-items: stretch;}
-  .hero__left{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+  .container{width: min(var(--max), calc(100% - 24px));}
+
+  /* Topbar smaller */
+  .topbar__inner{padding: 10px 0;}
+  .brand__mark{width:38px; height:38px; border-radius:12px; font-size:.82rem;}
+  .brand__text em{font-size:.95rem;}
+  .nav__toggle{width:40px; height:40px; border-radius:12px;}
+
+  /* Hero: tighter and centered */
+  .hero{padding: 76px 0 44px;}
+  .hero__content{grid-template-columns: 1fr; gap: 16px; align-items: stretch;}
+  .hero__left{display:flex; flex-direction:column; align-items:center; text-align:center;}
+  .chip{font-size:.88rem; padding: 8px 12px; text-align:center;}
+
+  .hero h1{
+    font-size: clamp(24px, 7vw, 34px);
+    line-height: 1.12;
+    margin-bottom: 10px;
   }
-  .chip{justify-content:center; text-align:center;}
-  .hero__left .lead, .hero__left h1{max-width: 640px;}
-  .hero__cta{width:100%;}
-  .hero__cta a{flex: 1 1 220px;}
-  .hero__cta .btn{width:100%;}
-  .hero__trust{width:100%;}
-  .trust__item{width:100%;}
-  .glass-card{max-width: 720px; margin: 0 auto;}
-  .carousel__track{scroll-padding-left: 10px; scroll-padding-right: 10px;}
-  .carousel__card{min-width: 92%;}
+  .lead{font-size: .98rem; line-height: 1.65;}
+
+  .hero__cta{width:100%; justify-content:center; gap:10px; margin-top: 14px;}
+  .hero__cta .btn{width:100%; padding: 13px 16px;}
+  .btn--ghost{padding: 13px 16px;}
+
+  /* Trust cards: one per line, no overflow */
+  .hero__trust{
+    width:100%;
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .trust__item{
+    width:100%;
+    text-align:center;
+    padding: 12px;
+  }
+  .trust__big{font-size: 1.15rem;}
+  .trust__small{font-size: .92rem;}
+
+  /* Right card centered */
+  .glass-card{
+    padding: 16px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 560px;
+  }
+  .glass-card h3{margin-bottom: 10px;}
+
+  /* Carousel cards smaller */
+  .carousel__track{gap: 10px; padding-bottom: 6px;}
+  .carousel__card{
+    min-width: 100%;
+    padding: 12px;
+  }
+  .checklist li{margin: 8px 0; font-size: .96rem;}
+  .price-box{grid-template-columns: 1fr; gap: 10px;}
+  .price-box__price{font-size: 1.15rem;}
+
+  /* Sections tighter */
+  .section{padding: 64px 0;}
+  .section__head{margin-bottom: 20px;}
+  .section__head h2{font-size: clamp(22px, 6vw, 30px);}
+
+  .grid-3,.grid-2{grid-template-columns: 1fr;}
+  .card{padding: 16px;}
+  .icon{width:34px; height:34px; border-radius: 12px;}
+
+  /* Plans section */
+  .plans{padding: 68px 0;}
+  .plan{padding: 16px;}
+  .plan__price{font-size: .98rem;}
+
+  /* Contact */
+  .contact{padding: 70px 0;}
+  .contact__wrap{grid-template-columns: 1fr; gap: 14px;}
+  .form{padding: 16px;}
+  input, textarea{padding: 12px; border-radius: 14px;}
+
+  /* Nav dropdown */
+  .nav__links{left: 12px; right: 12px; top: 64px;}
+
+  /* Floating WhatsApp a bit smaller */
+  .fab{right: 12px; bottom: 12px; padding: 11px 12px; font-size: .95rem;}
 }
+
+/* Extra small phones */
 @media (max-width: 380px){
-  .hero h1{font-size: 28px;}
-  .btn{padding: 13px 16px;}
+  .container{width: calc(100% - 20px);}
+  .hero h1{font-size: 24px;}
+  .chip{font-size: .82rem;}
+  .lead{font-size: .94rem;}
 }
